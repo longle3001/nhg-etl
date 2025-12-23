@@ -1,0 +1,76 @@
+version: '3'
+services:
+  magic:
+    image: mageai/mageai:latest
+    command: mage start ${PROJECT_NAME}
+    init: true 
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      USER_CODE_PATH: /home/src/${PROJECT_NAME}
+      ENV: ${ENV}
+    ports:
+      - 6789:6789
+    volumes:
+      - .:/home/src/
+    restart: on-failure:5
+    networks:
+      - mage-lor
+    
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      ACCEPT_EULA: "Y"
+    volumes:
+      - sql_data:/var/opt/mssql       # data volume persist
+      - ./DataMaster_20240620.bak:/var/opt/mssql/backup/DataMaster_20240620.bak
+    networks:
+      - mage-lor 
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:24
+    # image: clickhouse/clickhouse-server:22.5.1.2079
+    # image: clickhouse/clickhouse-server:latest
+    # platform: linux/amd64
+    ports:
+      - "9134:9000"  
+      - "8134:8123"  # Port cho HTTP interface
+    environment:
+      CLICKHOUSE_USER: default
+      CLICKHOUSE_PASSWORD: default
+    volumes:
+      - clickhouse_data_123:/var/lib/clickhouse  # Lưu dữ liệu giữa các lần khởi động container
+    networks:
+      - mage-lor
+
+  postgres:
+    image: postgres:16
+    # platform: linux/amd64
+    container_name: poc_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: postgres
+    ports:
+      - "5416:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data      
+    networks:
+      - mage-lor
+
+networks:
+  mage-lor:
+    driver: bridge
+
+volumes:
+  clickhouse_data_123:    
+  sql_data:
+  pg_data:
