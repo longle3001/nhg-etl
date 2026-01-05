@@ -1,10 +1,10 @@
 config: {}
 dwh:
   outputs:
-    dwh:
+    lumin:
       driver: native
-      port: 9000
-      host: clickhouse
+      port: 9134
+      host: localhost
       password: default
       schema: prod
       threads: 2
