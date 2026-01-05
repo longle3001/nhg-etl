@@ -1,13 +1,13 @@
 config: {}
 dwh:
   outputs:
-    lumin:
+    dwh:
       driver: native
       port: 9134
       host: localhost
       password: default
       schema: prod
-      threads: 2
+      threads: 1
       type: clickhouse
       send_receive_timeout: 3600
       user: default
