@@ -3,8 +3,8 @@ dwh:
   outputs:
     dwh:
       driver: native
-      port: 9134
-      host: localhost
+      port: 9000
+      host: clickhouse
       password: default
       schema: prod
       threads: 1
