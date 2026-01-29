@@ -1,0 +1,73 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - starry_sea
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: yaml
+  name: sincere thunder
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: sincere_thunder
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: yaml
+  name: starry sea
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - sincere_thunder
+  uuid: starry_sea
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2026-01-24 13:50:29.270908+00:00'
+data_integration: null
+description: 'dm_chucvu -> chua co
+
+  dm_khoahoc
+
+  dm_khoikienthuc
+
+  dm_loaihinhdt
+
+  dm_loaimonhoc
+
+  dm_loainhansu -> chua co
+
+  dm_nganh
+
+  dm_nghe
+
+  dm_tinhchatmonhoc'
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: bronze_asc_to_bigquerry_1
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: integration
+uuid: bronze_asc_to_bigquerry_1
+variables_dir: /home/src/mage_data/nhg
+widgets: []

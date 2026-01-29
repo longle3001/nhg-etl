@@ -1,0 +1,7 @@
+config:
+  bucket: nhg-hiu
+  file_type: parquet
+  object_key_path: hiu/
+  date_partition_format: export_date=%Y-%m-%d
+  google_application_credentials: null
+destination: google_cloud_storage

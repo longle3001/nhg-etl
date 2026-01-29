@@ -1,0 +1,8 @@
+config:
+  database: HRM_HIU
+  host: "{{ mage_secret_var('hiu_ss_host') }}"
+  port: "{{ mage_secret_var('hiu_ss_port') }}"
+  username: "{{ mage_secret_var('hiu_ss_username') }}"
+  password: "{{ mage_secret_var('hiu_ss_password') }}"
+  schema: dbo
+source: mssql

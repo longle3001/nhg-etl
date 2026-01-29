@@ -1,0 +1,1164 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - chromatic_rogue
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: yaml
+  name: graceful haze
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: graceful_haze
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: yaml
+  name: chromatic rogue
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - graceful_haze
+  uuid: chromatic_rogue
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2026-01-27 02:12:16.585986+00:00'
+data_integration:
+  catalog:
+    streams:
+    - auto_add_new_fields: false
+      destination_table: DM_KhoaHoc
+      key_properties:
+      - Id
+      metadata:
+      - breadcrumb: []
+        metadata:
+          forced-replication-method: FULL_TABLE
+          inclusion: available
+          schema-name: DM_KhoaHoc
+          selected: true
+          table-key-properties:
+          - Id
+          valid-replication-keys: []
+      - breadcrumb:
+        - properties
+        - Id
+        metadata:
+          inclusion: automatic
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenKhoaHoc
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - Nam
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - CachViet
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsVisible
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenTiengAnh
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GhiChu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayXoa
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiXoa
+        metadata:
+          inclusion: available
+          selected: true
+      replication_method: FULL_TABLE
+      run_in_parallel: true
+      schema:
+        properties:
+          CachViet:
+            type:
+            - 'null'
+            - string
+          GhiChu:
+            type:
+            - 'null'
+            - string
+          Id:
+            type:
+            - integer
+          IsDelete:
+            type:
+            - 'null'
+            - string
+          IsVisible:
+            type:
+            - 'null'
+            - string
+          Nam:
+            type:
+            - 'null'
+            - integer
+          NgayCapNhat:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayTao:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayXoa:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NguoiCapNhat:
+            type:
+            - 'null'
+            - integer
+          NguoiTao:
+            type:
+            - 'null'
+            - integer
+          NguoiXoa:
+            type:
+            - 'null'
+            - integer
+          TenKhoaHoc:
+            type:
+            - string
+          TenTiengAnh:
+            type:
+            - 'null'
+            - string
+        type: object
+      stream: DM_KhoaHoc
+      tap_stream_id: DM_KhoaHoc
+      unique_conflict_method: UPDATE
+      unique_constraints:
+      - Id
+    - auto_add_new_fields: false
+      destination_table: DM_KhoiKienThuc
+      key_properties:
+      - Id
+      metadata:
+      - breadcrumb: []
+        metadata:
+          forced-replication-method: FULL_TABLE
+          inclusion: available
+          schema-name: DM_KhoiKienThuc
+          selected: true
+          table-key-properties:
+          - Id
+          valid-replication-keys: []
+      - breadcrumb:
+        - properties
+        - Id
+        metadata:
+          inclusion: automatic
+          selected: true
+      - breadcrumb:
+        - properties
+        - MaKhoiKienThuc
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenKhoiKienThuc
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - STT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GhiChu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsDeleted
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayXoa
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiXoa
+        metadata:
+          inclusion: available
+          selected: true
+      replication_method: FULL_TABLE
+      run_in_parallel: true
+      schema:
+        properties:
+          GhiChu:
+            type:
+            - 'null'
+            - string
+          Id:
+            type:
+            - integer
+          IsDelete:
+            type:
+            - 'null'
+            - string
+          IsDeleted:
+            type:
+            - 'null'
+            - string
+          MaKhoiKienThuc:
+            type:
+            - 'null'
+            - string
+          NgayCapNhat:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayTao:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayXoa:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NguoiCapNhat:
+            type:
+            - 'null'
+            - integer
+          NguoiTao:
+            type:
+            - 'null'
+            - integer
+          NguoiXoa:
+            type:
+            - 'null'
+            - integer
+          STT:
+            type:
+            - 'null'
+            - integer
+          TenKhoiKienThuc:
+            type:
+            - 'null'
+            - string
+        type: object
+      stream: DM_KhoiKienThuc
+      tap_stream_id: DM_KhoiKienThuc
+      unique_conflict_method: UPDATE
+      unique_constraints:
+      - Id
+    - auto_add_new_fields: false
+      destination_table: DM_TinhChatCongNo
+      key_properties:
+      - Id
+      metadata:
+      - breadcrumb: []
+        metadata:
+          forced-replication-method: FULL_TABLE
+          inclusion: available
+          schema-name: DM_TinhChatCongNo
+          selected: true
+          table-key-properties:
+          - Id
+          valid-replication-keys: []
+      - breadcrumb:
+        - properties
+        - Id
+        metadata:
+          inclusion: automatic
+          selected: true
+      - breadcrumb:
+        - properties
+        - MaTinhChatCongNo
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenTinhChatCongNo
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GhiChu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NhomNghiepVu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - STT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsVisible
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsKhauTruXuatHoaDon
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsDelete
+        metadata:
+          inclusion: available
+          selected: true
+      replication_method: FULL_TABLE
+      run_in_parallel: true
+      schema:
+        properties:
+          GhiChu:
+            type:
+            - 'null'
+            - string
+          Id:
+            type:
+            - integer
+          IsDelete:
+            type:
+            - 'null'
+            - string
+          IsKhauTruXuatHoaDon:
+            type:
+            - 'null'
+            - string
+          IsVisible:
+            type:
+            - 'null'
+            - string
+          MaTinhChatCongNo:
+            type:
+            - string
+          NgayCapNhat:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayTao:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NguoiCapNhat:
+            type:
+            - 'null'
+            - integer
+          NguoiTao:
+            type:
+            - 'null'
+            - integer
+          NhomNghiepVu:
+            type:
+            - 'null'
+            - string
+          STT:
+            type:
+            - 'null'
+            - integer
+          TenTinhChatCongNo:
+            type:
+            - string
+        type: object
+      stream: DM_TinhChatCongNo
+      tap_stream_id: DM_TinhChatCongNo
+      unique_conflict_method: UPDATE
+      unique_constraints:
+      - Id
+    - auto_add_new_fields: false
+      destination_table: DM_Nghe
+      key_properties:
+      - Id
+      metadata:
+      - breadcrumb: []
+        metadata:
+          forced-replication-method: FULL_TABLE
+          inclusion: available
+          schema-name: DM_Nghe
+          selected: true
+          table-key-properties:
+          - Id
+          valid-replication-keys: []
+      - breadcrumb:
+        - properties
+        - Id
+        metadata:
+          inclusion: automatic
+          selected: true
+      - breadcrumb:
+        - properties
+        - MaNghe
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenNghe
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenTiengAnh
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenVietTat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNganh
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - KyTuMaSinhVien
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GhiChu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - STT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDLoaiChuyenNganh
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsVisible
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDChuyenNganhChiTiet
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayXoa
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiXoa
+        metadata:
+          inclusion: available
+          selected: true
+      replication_method: FULL_TABLE
+      run_in_parallel: true
+      schema:
+        properties:
+          GhiChu:
+            type:
+            - 'null'
+            - string
+          IDChuyenNganhChiTiet:
+            type:
+            - 'null'
+            - integer
+          IDLoaiChuyenNganh:
+            type:
+            - 'null'
+            - integer
+          IDNganh:
+            type:
+            - integer
+          Id:
+            type:
+            - integer
+          IsDelete:
+            type:
+            - 'null'
+            - string
+          IsVisible:
+            type:
+            - 'null'
+            - string
+          KyTuMaSinhVien:
+            type:
+            - 'null'
+            - string
+          MaNghe:
+            type:
+            - string
+          NgayCapNhat:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayTao:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayXoa:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NguoiCapNhat:
+            type:
+            - 'null'
+            - integer
+          NguoiTao:
+            type:
+            - 'null'
+            - integer
+          NguoiXoa:
+            type:
+            - 'null'
+            - integer
+          STT:
+            type:
+            - 'null'
+            - integer
+          TenNghe:
+            type:
+            - string
+          TenTiengAnh:
+            type:
+            - 'null'
+            - string
+          TenVietTat:
+            type:
+            - 'null'
+            - string
+        type: object
+      stream: DM_Nghe
+      tap_stream_id: DM_Nghe
+      unique_conflict_method: UPDATE
+      unique_constraints:
+      - Id
+    - auto_add_new_fields: false
+      destination_table: DM_LoaiMonHoc
+      key_properties:
+      - Id
+      metadata:
+      - breadcrumb: []
+        metadata:
+          forced-replication-method: FULL_TABLE
+          inclusion: available
+          schema-name: DM_LoaiMonHoc
+          selected: true
+          table-key-properties:
+          - Id
+          valid-replication-keys: []
+      - breadcrumb:
+        - properties
+        - Id
+        metadata:
+          inclusion: automatic
+          selected: true
+      - breadcrumb:
+        - properties
+        - MaLoaiMonHoc
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenLoaiMonHoc
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - STT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GhiChu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsDeleted
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsThuNhapHoc
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsCapSoHDDT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - CongThucQuyDoi
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - ServiceCode
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - HeSoLyThuyet
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - HeSoThucHanh
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayXoa
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiXoa
+        metadata:
+          inclusion: available
+          selected: true
+      replication_method: FULL_TABLE
+      run_in_parallel: true
+      schema:
+        properties:
+          CongThucQuyDoi:
+            type:
+            - 'null'
+            - string
+          GhiChu:
+            type:
+            - 'null'
+            - string
+          HeSoLyThuyet:
+            type:
+            - 'null'
+            - number
+          HeSoThucHanh:
+            type:
+            - 'null'
+            - number
+          Id:
+            type:
+            - integer
+          IsCapSoHDDT:
+            type:
+            - 'null'
+            - string
+          IsDelete:
+            type:
+            - 'null'
+            - string
+          IsDeleted:
+            type:
+            - 'null'
+            - string
+          IsThuNhapHoc:
+            type:
+            - 'null'
+            - string
+          MaLoaiMonHoc:
+            type:
+            - string
+          NgayCapNhat:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayTao:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayXoa:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NguoiCapNhat:
+            type:
+            - 'null'
+            - integer
+          NguoiTao:
+            type:
+            - 'null'
+            - integer
+          NguoiXoa:
+            type:
+            - 'null'
+            - integer
+          STT:
+            type:
+            - 'null'
+            - integer
+          ServiceCode:
+            type:
+            - 'null'
+            - string
+          TenLoaiMonHoc:
+            type:
+            - string
+        type: object
+      stream: DM_LoaiMonHoc
+      tap_stream_id: DM_LoaiMonHoc
+      unique_conflict_method: UPDATE
+      unique_constraints:
+      - Id
+    - auto_add_new_fields: false
+      destination_table: DM_LoaiHinhDT
+      key_properties:
+      - Id
+      metadata:
+      - breadcrumb: []
+        metadata:
+          forced-replication-method: FULL_TABLE
+          inclusion: available
+          schema-name: DM_LoaiHinhDT
+          selected: true
+          table-key-properties:
+          - Id
+          valid-replication-keys: []
+      - breadcrumb:
+        - properties
+        - Id
+        metadata:
+          inclusion: automatic
+          selected: true
+      - breadcrumb:
+        - properties
+        - MaLoaiHinhDT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenLoaiHinhDT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - STT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GhiChu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - LoaiHocChung
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - HinhThuc
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenTiengAnh
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - KyTuMaHoSoTuyenSinh
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDLoaiNganSach
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsVisible
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayXoa
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiXoa
+        metadata:
+          inclusion: available
+          selected: true
+      replication_method: FULL_TABLE
+      run_in_parallel: true
+      schema:
+        properties:
+          GhiChu:
+            type:
+            - 'null'
+            - string
+          HinhThuc:
+            type:
+            - 'null'
+            - string
+          IDLoaiNganSach:
+            type:
+            - 'null'
+            - integer
+          Id:
+            type:
+            - integer
+          IsDelete:
+            type:
+            - 'null'
+            - string
+          IsVisible:
+            type:
+            - 'null'
+            - string
+          KyTuMaHoSoTuyenSinh:
+            type:
+            - 'null'
+            - string
+          LoaiHocChung:
+            type:
+            - 'null'
+            - string
+          MaLoaiHinhDT:
+            type:
+            - string
+          NgayCapNhat:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayTao:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayXoa:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NguoiCapNhat:
+            type:
+            - 'null'
+            - integer
+          NguoiTao:
+            type:
+            - 'null'
+            - integer
+          NguoiXoa:
+            type:
+            - 'null'
+            - integer
+          STT:
+            type:
+            - 'null'
+            - integer
+          TenLoaiHinhDT:
+            type:
+            - string
+          TenTiengAnh:
+            type:
+            - 'null'
+            - string
+        type: object
+      stream: DM_LoaiHinhDT
+      tap_stream_id: DM_LoaiHinhDT
+      unique_conflict_method: UPDATE
+      unique_constraints:
+      - Id
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: asc_to_cloud_storage_1
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: integration
+uuid: asc_to_cloud_storage_1
+variables_dir: /home/src/mage_data/nhg
+widgets: []

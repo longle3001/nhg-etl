@@ -1,0 +1,2419 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - wise_haiku
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: yaml
+  name: towering tree
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: towering_tree
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: yaml
+  name: wise haiku
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - towering_tree
+  uuid: wise_haiku
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2026-01-28 05:13:46.254606+00:00'
+data_integration:
+  catalog:
+    streams:
+    - auto_add_new_fields: false
+      destination_table: NCKH_DM_LoaiDeTai
+      key_properties:
+      - ID
+      metadata:
+      - breadcrumb: []
+        metadata:
+          forced-replication-method: FULL_TABLE
+          inclusion: available
+          schema-name: NCKH_DM_LoaiDeTai
+          selected: true
+          table-key-properties:
+          - ID
+          valid-replication-keys: []
+      - breadcrumb:
+        - properties
+        - ID
+        metadata:
+          inclusion: automatic
+          selected: true
+      - breadcrumb:
+        - properties
+        - Ma
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - Ten
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsHienThi
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoThuTu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GhiChu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNguoiTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNguoiCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayDelete
+        metadata:
+          inclusion: available
+          selected: true
+      replication_method: FULL_TABLE
+      run_in_parallel: true
+      schema:
+        properties:
+          GhiChu:
+            type:
+            - 'null'
+            - string
+          ID:
+            type:
+            - integer
+          IDNguoiCapNhat:
+            type:
+            - 'null'
+            - integer
+          IDNguoiTao:
+            type:
+            - 'null'
+            - integer
+          IsDelete:
+            type:
+            - 'null'
+            - string
+          IsHienThi:
+            type:
+            - 'null'
+            - string
+          Ma:
+            type:
+            - 'null'
+            - string
+          NgayCapNhat:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayDelete:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayTao:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NguoiDelete:
+            type:
+            - 'null'
+            - integer
+          SoThuTu:
+            type:
+            - 'null'
+            - integer
+          Ten:
+            type:
+            - 'null'
+            - string
+        type: object
+      stream: NCKH_DM_LoaiDeTai
+      tap_stream_id: NCKH_DM_LoaiDeTai
+      unique_conflict_method: UPDATE
+      unique_constraints:
+      - ID
+    - auto_add_new_fields: false
+      destination_table: NCKH_DM_PhamVi
+      key_properties:
+      - ID
+      metadata:
+      - breadcrumb: []
+        metadata:
+          forced-replication-method: FULL_TABLE
+          inclusion: available
+          schema-name: NCKH_DM_PhamVi
+          selected: true
+          table-key-properties:
+          - ID
+          valid-replication-keys: []
+      - breadcrumb:
+        - properties
+        - ID
+        metadata:
+          inclusion: automatic
+          selected: true
+      - breadcrumb:
+        - properties
+        - Ma
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - Ten
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsHienThi
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoThuTu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GhiChu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNguoiTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNguoiCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayDelete
+        metadata:
+          inclusion: available
+          selected: true
+      replication_method: FULL_TABLE
+      run_in_parallel: true
+      schema:
+        properties:
+          GhiChu:
+            type:
+            - 'null'
+            - string
+          ID:
+            type:
+            - integer
+          IDNguoiCapNhat:
+            type:
+            - 'null'
+            - integer
+          IDNguoiTao:
+            type:
+            - 'null'
+            - integer
+          IsDelete:
+            type:
+            - 'null'
+            - string
+          IsHienThi:
+            type:
+            - 'null'
+            - string
+          Ma:
+            type:
+            - 'null'
+            - string
+          NgayCapNhat:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayDelete:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayTao:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NguoiDelete:
+            type:
+            - 'null'
+            - integer
+          SoThuTu:
+            type:
+            - 'null'
+            - integer
+          Ten:
+            type:
+            - 'null'
+            - string
+        type: object
+      stream: NCKH_DM_PhamVi
+      tap_stream_id: NCKH_DM_PhamVi
+      unique_conflict_method: UPDATE
+      unique_constraints:
+      - ID
+    - auto_add_new_fields: false
+      destination_table: NCKH_NhomTheLoai
+      key_properties:
+      - ID
+      metadata:
+      - breadcrumb: []
+        metadata:
+          forced-replication-method: FULL_TABLE
+          inclusion: available
+          schema-name: NCKH_NhomTheLoai
+          selected: true
+          table-key-properties:
+          - ID
+          valid-replication-keys: []
+      - breadcrumb:
+        - properties
+        - ID
+        metadata:
+          inclusion: automatic
+          selected: true
+      - breadcrumb:
+        - properties
+        - MaNhomTheLoai
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenNhomTheLoai
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GhiChu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoThuTu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNguoiTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNguoiCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - KeyMAP
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - LoaiHienThi
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - LoaiDuLieu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsHienThi
+        metadata:
+          inclusion: available
+          selected: true
+      replication_method: FULL_TABLE
+      run_in_parallel: true
+      schema:
+        properties:
+          GhiChu:
+            type:
+            - 'null'
+            - string
+          ID:
+            type:
+            - integer
+          IDNguoiCapNhat:
+            type:
+            - 'null'
+            - integer
+          IDNguoiTao:
+            type:
+            - 'null'
+            - integer
+          IsDelete:
+            type:
+            - 'null'
+            - string
+          IsHienThi:
+            type:
+            - 'null'
+            - string
+          KeyMAP:
+            type:
+            - 'null'
+            - string
+          LoaiDuLieu:
+            type:
+            - 'null'
+            - integer
+          LoaiHienThi:
+            type:
+            - 'null'
+            - integer
+          MaNhomTheLoai:
+            type:
+            - 'null'
+            - string
+          NgayCapNhat:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayDelete:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayTao:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NguoiDelete:
+            type:
+            - 'null'
+            - integer
+          SoThuTu:
+            type:
+            - 'null'
+            - integer
+          TenNhomTheLoai:
+            type:
+            - 'null'
+            - string
+        type: object
+      stream: NCKH_NhomTheLoai
+      tap_stream_id: NCKH_NhomTheLoai
+      unique_conflict_method: UPDATE
+      unique_constraints:
+      - ID
+    - auto_add_new_fields: false
+      destination_table: NCKH_TheLoai
+      key_properties:
+      - ID
+      metadata:
+      - breadcrumb: []
+        metadata:
+          forced-replication-method: FULL_TABLE
+          inclusion: available
+          schema-name: NCKH_TheLoai
+          selected: true
+          table-key-properties:
+          - ID
+          valid-replication-keys: []
+      - breadcrumb:
+        - properties
+        - ID
+        metadata:
+          inclusion: automatic
+          selected: true
+      - breadcrumb:
+        - properties
+        - MaTheLoai
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenTheLoai
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GhiChu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoThuTu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNguoiTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNguoiCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNhomTheLoai
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - KeyMAP
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - LoaiHienThi
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDThamChieu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietQuyDoi
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - LoaiDuLieu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - ChuTri
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - ThanhVien
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - DonViHoatDong
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenDonViKiemDuyet
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - DiemKNC
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - HeSo
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsHienThi
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDKhuVuc
+        metadata:
+          inclusion: available
+          selected: true
+      replication_method: FULL_TABLE
+      run_in_parallel: true
+      schema:
+        properties:
+          ChuTri:
+            type:
+            - 'null'
+            - number
+          DiemKNC:
+            type:
+            - 'null'
+            - number
+          DonViHoatDong:
+            type:
+            - 'null'
+            - integer
+          GhiChu:
+            type:
+            - 'null'
+            - string
+          HeSo:
+            type:
+            - 'null'
+            - number
+          ID:
+            type:
+            - integer
+          IDKhuVuc:
+            type:
+            - 'null'
+            - integer
+          IDNguoiCapNhat:
+            type:
+            - 'null'
+            - integer
+          IDNguoiTao:
+            type:
+            - 'null'
+            - integer
+          IDNhomTheLoai:
+            type:
+            - 'null'
+            - integer
+          IDThamChieu:
+            type:
+            - 'null'
+            - integer
+          IsDelete:
+            type:
+            - 'null'
+            - string
+          IsHienThi:
+            type:
+            - 'null'
+            - string
+          KeyMAP:
+            type:
+            - 'null'
+            - string
+          LoaiDuLieu:
+            type:
+            - 'null'
+            - integer
+          LoaiHienThi:
+            type:
+            - 'null'
+            - integer
+          MaTheLoai:
+            type:
+            - 'null'
+            - string
+          NgayCapNhat:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayDelete:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayTao:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NguoiDelete:
+            type:
+            - 'null'
+            - integer
+          SoThuTu:
+            type:
+            - 'null'
+            - integer
+          SoTietQuyDoi:
+            type:
+            - 'null'
+            - number
+          TenDonViKiemDuyet:
+            type:
+            - 'null'
+            - string
+          TenTheLoai:
+            type:
+            - 'null'
+            - string
+          ThanhVien:
+            type:
+            - 'null'
+            - number
+        type: object
+      stream: NCKH_TheLoai
+      tap_stream_id: NCKH_TheLoai
+      unique_conflict_method: UPDATE
+      unique_constraints:
+      - ID
+    - auto_add_new_fields: false
+      destination_table: NCKH_ThongKeGioNghienCuu
+      key_properties:
+      - ID
+      metadata:
+      - breadcrumb: []
+        metadata:
+          forced-replication-method: FULL_TABLE
+          inclusion: available
+          schema-name: NCKH_ThongKeGioNghienCuu
+          selected: true
+          table-key-properties:
+          - ID
+          valid-replication-keys: []
+      - breadcrumb:
+        - properties
+        - ID
+        metadata:
+          inclusion: automatic
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNhanSu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNguoiDung
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - MaNhanSu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - HoDem
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - Ten
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgaySinh
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GioiTinh
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoCMND
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoDienThoai
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoDiDong
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NoiOHienTai
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NoiSinh
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDChucDanh
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - HienTaiChucDanh
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - MaChucDanh
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenChucDanh
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - HeSo
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - HeSoKhac
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - HienTaiPhongBan
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - MaPhongBan
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenPhongBan
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GioNCKHTrongTruong
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GioNCKHNgoaiTruong
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GioNCKH
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNamHoc
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NamHoc
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDLoaiTietChuan
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietBanDau
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietNoNamTruoc
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietChuan
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietThuaThieu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietConLai
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GhiChu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TiLePhanTramHT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDChucVu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenChucVu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TyLeGiamTruSTC
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietGiamTru
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietPhaiThucHien
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNgachCongChuc
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - MaNgachCongChuc
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenNgachCongChuc
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NCKH_Muc6
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NCKH_Muc8
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NCKH_Muc9
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NCKH_Muc10
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NCKH_Muc11
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NCKH_Muc12
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NCKH_Muc13
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NCKH_Muc14
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNguoiTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNguoiCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NCKH_TongCong
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NCKH_SoTietThieu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NCKH_SoTietThua
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietBaoLuu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - HeSoLuong
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoGioDaQuyDoi
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - DonGia
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - ThanhTien
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - HeSoQuyDoi
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDTrangThai
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsHoanThanhNhiemVu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietThanhToan
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - KhongHoanThanhNhiemVuDoThieuNCKHTrongTruong
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GioNCKH_1
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GioNCKH_2
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GioNCKH_3
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GioNCKH_4
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GioNCKH_5
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GioNCKH_6
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GioNCKH_7
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDToBoMon
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenBoMon
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietDMTGCNN
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietDMTGCBT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietDMTGCT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TongSoTietDTDA
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietBBQTIS
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietBBQTKTIS
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietBBTNCTD
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietBBTNKTD
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietHTHNQT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietHTHNQG
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietHTHNCT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TongSoTietBBKH
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietSPSHCT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TongSoTietTSTT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietGT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietTLTK
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TongSoTietTLHT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietTLHNKH
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietBGDT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietBSCH
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietBDWT
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoTietHDK
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TongSoTietHDK
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GioNCKH_3_0
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GioNCKH_3_1
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GioNCKH_3_2
+        metadata:
+          inclusion: available
+          selected: true
+      replication_method: FULL_TABLE
+      run_in_parallel: true
+      schema:
+        properties:
+          DonGia:
+            type:
+            - 'null'
+            - number
+          GhiChu:
+            type:
+            - 'null'
+            - string
+          GioNCKH:
+            type:
+            - 'null'
+            - number
+          GioNCKHNgoaiTruong:
+            type:
+            - 'null'
+            - number
+          GioNCKHTrongTruong:
+            type:
+            - 'null'
+            - number
+          GioNCKH_1:
+            type:
+            - 'null'
+            - number
+          GioNCKH_2:
+            type:
+            - 'null'
+            - number
+          GioNCKH_3:
+            type:
+            - 'null'
+            - number
+          GioNCKH_3_0:
+            type:
+            - 'null'
+            - number
+          GioNCKH_3_1:
+            type:
+            - 'null'
+            - number
+          GioNCKH_3_2:
+            type:
+            - 'null'
+            - number
+          GioNCKH_4:
+            type:
+            - 'null'
+            - number
+          GioNCKH_5:
+            type:
+            - 'null'
+            - number
+          GioNCKH_6:
+            type:
+            - 'null'
+            - number
+          GioNCKH_7:
+            type:
+            - 'null'
+            - number
+          GioiTinh:
+            type:
+            - 'null'
+            - string
+          HeSo:
+            type:
+            - 'null'
+            - number
+          HeSoKhac:
+            type:
+            - 'null'
+            - number
+          HeSoLuong:
+            type:
+            - 'null'
+            - number
+          HeSoQuyDoi:
+            type:
+            - 'null'
+            - number
+          HienTaiChucDanh:
+            type:
+            - 'null'
+            - integer
+          HienTaiPhongBan:
+            type:
+            - 'null'
+            - integer
+          HoDem:
+            type:
+            - 'null'
+            - string
+          ID:
+            type:
+            - integer
+          IDChucDanh:
+            type:
+            - 'null'
+            - integer
+          IDChucVu:
+            type:
+            - 'null'
+            - integer
+          IDLoaiTietChuan:
+            type:
+            - 'null'
+            - integer
+          IDNamHoc:
+            type:
+            - 'null'
+            - integer
+          IDNgachCongChuc:
+            type:
+            - 'null'
+            - integer
+          IDNguoiCapNhat:
+            type:
+            - 'null'
+            - integer
+          IDNguoiDung:
+            type:
+            - 'null'
+            - integer
+          IDNguoiTao:
+            type:
+            - 'null'
+            - integer
+          IDNhanSu:
+            type:
+            - 'null'
+            - integer
+          IDToBoMon:
+            type:
+            - 'null'
+            - integer
+          IDTrangThai:
+            type:
+            - 'null'
+            - integer
+          IsDelete:
+            type:
+            - 'null'
+            - string
+          IsHoanThanhNhiemVu:
+            type:
+            - 'null'
+            - string
+          KhongHoanThanhNhiemVuDoThieuNCKHTrongTruong:
+            type:
+            - 'null'
+            - string
+          MaChucDanh:
+            type:
+            - 'null'
+            - string
+          MaNgachCongChuc:
+            type:
+            - 'null'
+            - string
+          MaNhanSu:
+            type:
+            - 'null'
+            - string
+          MaPhongBan:
+            type:
+            - 'null'
+            - string
+          NCKH_Muc10:
+            type:
+            - 'null'
+            - number
+          NCKH_Muc11:
+            type:
+            - 'null'
+            - number
+          NCKH_Muc12:
+            type:
+            - 'null'
+            - number
+          NCKH_Muc13:
+            type:
+            - 'null'
+            - number
+          NCKH_Muc14:
+            type:
+            - 'null'
+            - number
+          NCKH_Muc6:
+            type:
+            - 'null'
+            - number
+          NCKH_Muc8:
+            type:
+            - 'null'
+            - number
+          NCKH_Muc9:
+            type:
+            - 'null'
+            - number
+          NCKH_SoTietThieu:
+            type:
+            - 'null'
+            - number
+          NCKH_SoTietThua:
+            type:
+            - 'null'
+            - number
+          NCKH_TongCong:
+            type:
+            - 'null'
+            - number
+          NamHoc:
+            type:
+            - 'null'
+            - integer
+          NgayCapNhat:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayDelete:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgaySinh:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayTao:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NguoiDelete:
+            type:
+            - 'null'
+            - integer
+          NoiOHienTai:
+            type:
+            - 'null'
+            - string
+          NoiSinh:
+            type:
+            - 'null'
+            - string
+          SoCMND:
+            type:
+            - 'null'
+            - string
+          SoDiDong:
+            type:
+            - 'null'
+            - string
+          SoDienThoai:
+            type:
+            - 'null'
+            - string
+          SoGioDaQuyDoi:
+            type:
+            - 'null'
+            - number
+          SoTietBBQTIS:
+            type:
+            - 'null'
+            - number
+          SoTietBBQTKTIS:
+            type:
+            - 'null'
+            - number
+          SoTietBBTNCTD:
+            type:
+            - 'null'
+            - number
+          SoTietBBTNKTD:
+            type:
+            - 'null'
+            - number
+          SoTietBDWT:
+            type:
+            - 'null'
+            - number
+          SoTietBGDT:
+            type:
+            - 'null'
+            - number
+          SoTietBSCH:
+            type:
+            - 'null'
+            - number
+          SoTietBanDau:
+            type:
+            - 'null'
+            - number
+          SoTietBaoLuu:
+            type:
+            - 'null'
+            - number
+          SoTietChuan:
+            type:
+            - 'null'
+            - number
+          SoTietConLai:
+            type:
+            - 'null'
+            - number
+          SoTietDMTGCBT:
+            type:
+            - 'null'
+            - number
+          SoTietDMTGCNN:
+            type:
+            - 'null'
+            - number
+          SoTietDMTGCT:
+            type:
+            - 'null'
+            - number
+          SoTietGT:
+            type:
+            - 'null'
+            - number
+          SoTietGiamTru:
+            type:
+            - 'null'
+            - number
+          SoTietHDK:
+            type:
+            - 'null'
+            - number
+          SoTietHTHNCT:
+            type:
+            - 'null'
+            - number
+          SoTietHTHNQG:
+            type:
+            - 'null'
+            - number
+          SoTietHTHNQT:
+            type:
+            - 'null'
+            - number
+          SoTietNoNamTruoc:
+            type:
+            - 'null'
+            - number
+          SoTietPhaiThucHien:
+            type:
+            - 'null'
+            - number
+          SoTietSPSHCT:
+            type:
+            - 'null'
+            - number
+          SoTietTLHNKH:
+            type:
+            - 'null'
+            - number
+          SoTietTLTK:
+            type:
+            - 'null'
+            - number
+          SoTietThanhToan:
+            type:
+            - 'null'
+            - number
+          SoTietThuaThieu:
+            type:
+            - 'null'
+            - number
+          Ten:
+            type:
+            - 'null'
+            - string
+          TenBoMon:
+            type:
+            - 'null'
+            - string
+          TenChucDanh:
+            type:
+            - 'null'
+            - string
+          TenChucVu:
+            type:
+            - 'null'
+            - string
+          TenNgachCongChuc:
+            type:
+            - 'null'
+            - string
+          TenPhongBan:
+            type:
+            - 'null'
+            - string
+          ThanhTien:
+            type:
+            - 'null'
+            - number
+          TiLePhanTramHT:
+            type:
+            - 'null'
+            - number
+          TongSoTietBBKH:
+            type:
+            - 'null'
+            - number
+          TongSoTietDTDA:
+            type:
+            - 'null'
+            - number
+          TongSoTietHDK:
+            type:
+            - 'null'
+            - number
+          TongSoTietTLHT:
+            type:
+            - 'null'
+            - number
+          TongSoTietTSTT:
+            type:
+            - 'null'
+            - number
+          TyLeGiamTruSTC:
+            type:
+            - 'null'
+            - number
+        type: object
+      stream: NCKH_ThongKeGioNghienCuu
+      tap_stream_id: NCKH_ThongKeGioNghienCuu
+      unique_conflict_method: UPDATE
+      unique_constraints:
+      - ID
+    - auto_add_new_fields: false
+      destination_table: NS_PhatMinhSangChe
+      key_properties:
+      - ID
+      metadata:
+      - breadcrumb: []
+        metadata:
+          forced-replication-method: FULL_TABLE
+          inclusion: available
+          schema-name: NS_PhatMinhSangChe
+          selected: true
+          table-key-properties:
+          - ID
+          valid-replication-keys: []
+      - breadcrumb:
+        - properties
+        - ID
+        metadata:
+          inclusion: automatic
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNguoiDung
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNhomTheLoai
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDTheLoai
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - DeXuatQuyDoi
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenPhatMinhSangChe
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NamCapBang
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - GhiChu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoThuTu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsDuyet
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiDuyet
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayDuyet
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - LyDo
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDTrangThai
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNguoiTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNguoiCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayCapNhat
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IsDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NguoiDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayDelete
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoQuyetDinh
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - CoQuanCap
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayNopDon
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoNamBaoHo
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - MinhChung
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDDeTai
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - ChuSoHuu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayCapBang
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - LoaiDuLieu
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenDeTai
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - SoBang
+        metadata:
+          inclusion: available
+          selected: true
+      replication_method: FULL_TABLE
+      run_in_parallel: true
+      schema:
+        properties:
+          ChuSoHuu:
+            type:
+            - 'null'
+            - string
+          CoQuanCap:
+            type:
+            - 'null'
+            - string
+          DeXuatQuyDoi:
+            type:
+            - 'null'
+            - number
+          GhiChu:
+            type:
+            - 'null'
+            - string
+          ID:
+            type:
+            - integer
+          IDDeTai:
+            type:
+            - 'null'
+            - integer
+          IDNguoiCapNhat:
+            type:
+            - 'null'
+            - integer
+          IDNguoiDung:
+            type:
+            - 'null'
+            - integer
+          IDNguoiTao:
+            type:
+            - 'null'
+            - integer
+          IDNhomTheLoai:
+            type:
+            - 'null'
+            - integer
+          IDTheLoai:
+            type:
+            - 'null'
+            - integer
+          IDTrangThai:
+            type:
+            - 'null'
+            - integer
+          IsDelete:
+            type:
+            - 'null'
+            - string
+          IsDuyet:
+            type:
+            - 'null'
+            - string
+          LoaiDuLieu:
+            type:
+            - 'null'
+            - integer
+          LyDo:
+            type:
+            - 'null'
+            - string
+          MinhChung:
+            type:
+            - 'null'
+            - string
+          NamCapBang:
+            type:
+            - 'null'
+            - integer
+          NgayCapBang:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayCapNhat:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayDelete:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayDuyet:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayNopDon:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NgayTao:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          NguoiDelete:
+            type:
+            - 'null'
+            - integer
+          NguoiDuyet:
+            type:
+            - 'null'
+            - integer
+          SoBang:
+            type:
+            - 'null'
+            - string
+          SoNamBaoHo:
+            type:
+            - 'null'
+            - integer
+          SoQuyetDinh:
+            type:
+            - 'null'
+            - string
+          SoThuTu:
+            type:
+            - 'null'
+            - integer
+          TenDeTai:
+            type:
+            - 'null'
+            - string
+          TenPhatMinhSangChe:
+            type:
+            - 'null'
+            - string
+        type: object
+      stream: NS_PhatMinhSangChe
+      tap_stream_id: NS_PhatMinhSangChe
+      unique_conflict_method: UPDATE
+      unique_constraints:
+      - ID
+    - auto_add_new_fields: false
+      destination_table: View_ACL_FileAttach
+      key_properties: []
+      metadata:
+      - breadcrumb: []
+        metadata:
+          forced-replication-method: FULL_TABLE
+          inclusion: available
+          schema-name: View_ACL_FileAttach
+          selected: true
+          table-key-properties: []
+          valid-replication-keys: []
+      - breadcrumb:
+        - properties
+        - ID
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenFile
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - LoaiFile
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - KichThuocFile
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - TenFileMoi
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - CheckSum
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - FolderFunc
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - DaSuDung
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - ForWeb
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - IDNguoiTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - NgayTao
+        metadata:
+          inclusion: available
+          selected: true
+      - breadcrumb:
+        - properties
+        - DigitalSignatureFile
+        metadata:
+          inclusion: available
+          selected: true
+      replication_method: FULL_TABLE
+      run_in_parallel: true
+      schema:
+        properties:
+          CheckSum:
+            type:
+            - 'null'
+            - string
+          DaSuDung:
+            type:
+            - 'null'
+            - string
+          DigitalSignatureFile:
+            type:
+            - 'null'
+            - string
+          FolderFunc:
+            type:
+            - 'null'
+            - string
+          ForWeb:
+            type:
+            - 'null'
+            - integer
+          ID:
+            type:
+            - integer
+          IDNguoiTao:
+            type:
+            - 'null'
+            - integer
+          KichThuocFile:
+            type:
+            - 'null'
+            - integer
+          LoaiFile:
+            type:
+            - 'null'
+            - string
+          NgayTao:
+            format: date-time
+            type:
+            - 'null'
+            - string
+          TenFile:
+            type:
+            - 'null'
+            - string
+          TenFileMoi:
+            type:
+            - 'null'
+            - string
+        type: object
+      stream: View_ACL_FileAttach
+      tap_stream_id: View_ACL_FileAttach
+      unique_conflict_method: UPDATE
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: "\tasc_to_cloud_storage_8"
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: integration
+uuid: asc_to_cloud_storage_8
+variables_dir: /home/src/mage_data/nhg
+widgets: []

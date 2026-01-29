@@ -1,0 +1,8 @@
+config:
+  path_to_credentials_json_file: null
+  project_id: intelligent-data-lake-house
+  dataset: bronze_hiu_lh
+  location: asia-southeast1
+  disable_update_column_types: null
+  use_batch_load: true
+destination: bigquery
