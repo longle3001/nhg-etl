@@ -1,7 +1,7 @@
 config: {}
 dwh:
   outputs:
-    dev:
+    bronze:
       dataset: bronze_hiu_lh
       job_execution_timeout_seconds: 600
       job_retries: 1
@@ -11,4 +11,27 @@ dwh:
       project: intelligent-data-lake-house
       threads: 1
       type: bigquery
-  target: dev
+  target: bronze
+  outputs:
+    silver:
+      dataset: silver_hiu_lh
+      job_execution_timeout_seconds: 600
+      job_retries: 1
+      location: asia-southeast1
+      method: oauth
+      priority: interactive
+      project: intelligent-data-lake-house
+      threads: 1
+      type: bigquery
+  outputs:
+    gold:
+      dataset: gold_hiu_lh
+      job_execution_timeout_seconds: 600
+      job_retries: 1
+      location: asia-southeast1
+      method: oauth
+      priority: interactive
+      project: intelligent-data-lake-house
+      threads: 1
+      type: bigquery
+  target: gold

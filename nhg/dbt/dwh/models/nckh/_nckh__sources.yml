@@ -1,0 +1,46 @@
+version: 2
+
+sources:
+  - name: bronze_hiu_lh_nckh # A logical name for your source, used in dbt models
+    database: intelligent-data-lake-house
+    schema: bronze_hiu_lh # BigQuery dataset name (schema)
+
+    tables:
+      - name: KHCN_BaiBaoKhoaHoc 
+        description: KHCN_BaiBaoKhoaHoc
+      - name: KHCN_CauHinhTinhGio 
+        description: KHCN_CauHinhTinhGio
+      - name: KHCN_ChiTietThamGia 
+        description: KHCN_ChiTietThamGia
+      - name: KHCN_ChiTietVaiTro_LoaiDoiTuong 
+        description: KHCN_ChiTietVaiTro_LoaiDoiTuong
+      - name: KHCN_DM_LoaiDuLieu 
+        description: KHCN_DM_LoaiDuLieu        
+      - name: KHCN_DM_TinhTrang 
+        description: KHCN_DM_TinhTrang
+      - name: KHCN_DM_TrangThai 
+        description: KHCN_DM_TrangThai
+      - name: KHCN_DeTaiDuAn 
+        description: KHCN_DeTaiDuAn
+      - name: KHCN_GiaiThuong 
+        description: KHCN_GiaiThuong
+      - name: KHCN_HoSoDinhKem 
+        description: KHCN_HoSoDinhKem
+      - name: KHCN_HoiNghiHoiThao 
+        description: KHCN_HoiNghiHoiThao
+      - name: KHCN_HopDongTuVanChuyenGiao 
+        description: KHCN_HopDongTuVanChuyenGiao
+      - name: KHCN_TaiLieuHocTap 
+        description: KHCN_TaiLieuHocTap        
+      - name: KHCN_ThanhPhanThamGia 
+        description: KHCN_ThanhPhanThamGia
+      - name: NCKH_DM_LoaiDeTai 
+        description: NCKH_DM_LoaiDeTai
+      - name: NCKH_DM_PhamVi 
+        description: NCKH_DM_PhamVi
+      - name: NCKH_NhomTheLoai 
+        description: NCKH_NhomTheLoai       
+      - name: NCKH_TheLoai 
+        description: NCKH_TheLoai   
+      - name: NCKH_ThongKeGioNghienCuu 
+        description: NCKH_ThongKeGioNghienCuu   
